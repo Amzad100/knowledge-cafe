@@ -1,35 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
-const SingleCard = (props) => {
-    const { id, autharName, blogTitle, autharImg, readTime, publishDate, coverImg } = props.item;
+
+const SingleCard = ({item,handlereadTime}) => {
     return (
         <>
-            <div className="md:col-span-4 col-span-4 col-start-2 md:col-start-2  lg:col-span-2 ...">
-                <div className="card card-compact w-100 bg-base-100 shadow-xl">
-                    <figure><img src={coverImg} alt="Shoes" /></figure>
-                    <div className="card-body">
-                        <div className="navbar">
-                            <div className="flex-1">
-                                <div>
-                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                        <div className="w-10 rounded-full flex flex-nowrap">
-                                            <img src="https://cdn.pixabay.com/photo/2017/06/17/10/17/entrepreneur-2411763_960_720.jpg" />
-                                        </div>
-                                    </label>
-                                </div>
-                                <div>
-                                    <div>
-                                        <h1 className='text-xl font-bold'>{autharName}</h1>
-                                        <p>{publishDate}</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div>
-                                <h1 className="text-xl">{readTime} min read</h1>
+            <div className="card mb-3">
+                <img src={item.coverImg} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <div className="d-flex justify-content-between">
+                        <div className="d-flex">
+                            <img className="rounded-circle" width="50" height="50" src={item.autharImg} alt="Logo" />
+                            <div className="ms-2">
+                                <h5 className=' mb-0'>{item.autharName}</h5>
+                                <p className='mt-0'>{item.publishDate}</p>
                             </div>
                         </div>
+                        <div>
+                            <p className="">{item.readTime} min read <a href=""><FontAwesomeIcon icon={faBookmark} /></a></p>
+                        </div>
                     </div>
+                    <h5 className="card-title">{item.blogTitle}</h5>
+                    <p className="card-text">#beginners #programming</p>
+                    <a onClick={()=>handlereadTime(item.readTime)} className="card-text">Mark as read</a>
                 </div>
             </div>
         </>
