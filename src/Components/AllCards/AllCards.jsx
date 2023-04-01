@@ -5,15 +5,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const AllCards = () => {
-    const [readTime, setreadTime] = useState(0);
+    const [readTime, setreadTime] = useState([0]);
     const [bookmarks, setBookmarks] = useState([]);
 
     const handlereadTime = (time) => {
         const previousreadTime = JSON.parse(localStorage.getItem("readTime"));
         if (previousreadTime) {
-            const sum = previousreadTime + time;
-            localStorage.setItem("readTime", sum);
-            setreadTime(sum);
+            const totalTime = previousreadTime + time;
+            localStorage.setItem("readTime", totalTime);
+            setreadTime(totalTime);
         } else {
             localStorage.setItem("readTime", time);
             setreadTime(time);

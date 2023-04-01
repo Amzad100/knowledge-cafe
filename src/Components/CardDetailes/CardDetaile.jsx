@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const CardDetaile = ({ readTime, bookmarks }) => {
+const CardDetaile = ({ readTime, bookmarks}) => {
     const [time, setTime] = useState(readTime);
     useEffect(() => {
         const getreadTimeFromStorage = localStorage.getItem("readTime");

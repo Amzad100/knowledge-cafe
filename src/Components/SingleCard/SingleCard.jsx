@@ -12,7 +12,7 @@ const SingleCard = ({ item, handlereadTime, handleBookmark }) => {
                         <div className="d-flex">
                             <img className="rounded-circle" width="50" height="50" src={item.autharImg} alt="Logo" />
                             <div className="ms-2">
-                                <h5 className=' mb-0'>{item.autharName}</h5>
+                                <h5 className='mb-0'>{item.autharName}</h5>
                                 <p className='mt-0'>{item.publishDate}</p>
                             </div>
                         </div>

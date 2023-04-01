@@ -4,6 +4,7 @@ import AllCards from './Components/AllCards/AllCards';
 import Header from './Components/Header/Header';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Blog from './Components/Blog/Blog';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Header></Header>
       </div>
       <AllCards></AllCards>
+      <Blog></Blog>
     <ToastContainer></ToastContainer>
     </div>
   )
