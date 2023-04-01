@@ -60,3 +60,4 @@ const AllCards = () => {
 };
 
 export default AllCards;
+// thanks

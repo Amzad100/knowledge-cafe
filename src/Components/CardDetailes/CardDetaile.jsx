@@ -20,3 +20,4 @@ const CardDetaile = ({ readTime, bookmarks}) => {
 };
 
 export default CardDetaile;
+// thanks

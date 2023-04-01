@@ -30,3 +30,4 @@ const SingleCard = ({ item, handlereadTime, handleBookmark }) => {
 };
 
 export default SingleCard;
+// thanks
