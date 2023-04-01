@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
-
-const SingleCard = ({item,handlereadTime}) => {
+const SingleCard = ({ item, handlereadTime, handleBookmark }) => {
     return (
         <>
             <div className="card mb-3">
@@ -18,12 +17,12 @@ const SingleCard = ({item,handlereadTime}) => {
                             </div>
                         </div>
                         <div>
-                            <p className="">{item.readTime} min read <a href=""><FontAwesomeIcon icon={faBookmark} /></a></p>
+                            <p >{item.readTime} min read <span onClick={() => handleBookmark(item.blogTitle)} role='button' href=""><FontAwesomeIcon icon={faBookmark} /></span></p>
                         </div>
                     </div>
                     <h5 className="card-title">{item.blogTitle}</h5>
                     <p className="card-text">#beginners #programming</p>
-                    <a onClick={()=>handlereadTime(item.readTime)} className="card-text">Mark as read</a>
+                    <a onClick={() => handlereadTime(item.readTime)} className="card-text" role='button'>Mark as read</a>
                 </div>
             </div>
         </>
