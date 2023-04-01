@@ -28,13 +28,13 @@ const AllCards = () => {
     const handleBookmark = (item) => {
         const newBookmarks = [...bookmarks, item];
         setBookmarks(newBookmarks);
-        // if (bookmarks.length === 0) {
-        //     toast("Added Bookmark!");
-        //     setBookmarks(newBookmarks);
-        // } else {
-        //     toast("This Bookmark is alrady added!");
-        //     setBookmarks(newBookmarks);
-        // }
+        if (bookmarks.length === 0) {
+            toast("Added Bookmark!");
+            setBookmarks(newBookmarks);
+        } else {
+            toast("This Bookmark is alrady added!");
+            setBookmarks(newBookmarks);
+        }
 
     }
     return (
